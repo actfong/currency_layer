@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
 
   spec.summary        = %q{Ruby wrapper for currencylayer by apilayer. See https://currencylayer.com/ and https://apilayer.com/ for more details.}
   spec.description    = %q{Ruby wrapper for currencylayer by apilayer. See https://currencylayer.com/ and https://apilayer.com/ for more details.}
-  spec.homepage       = "https://github.com/actfong/vatlayer"
+  spec.homepage       = "https://github.com/actfong/currencylayer"
   spec.licenses       = %w(MIT)
 
   # spec.add_runtime_dependency 'apilayer', '~> 2.0', '>= 2.0.0'
