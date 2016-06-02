@@ -1,0 +1,78 @@
+== currency_layer {<img src="https://secure.travis-ci.org/actfong/currency_layer.png"/>}[http://travis-ci.org/actfong/currency_layer] {<img src="https://codeclimate.com/github/actfong/currency_layer.png"/>}[https://codeclimate.com/github/actfong/currency_layer] {<img src="https://badge.fury.io/rb/currency_layer.svg" alt="Gem Version" />}[https://badge.fury.io/rb/currency_layer] 
+
+Ruby wrapper for currencylayer of apilayer.
+See https://currencylayer.com/ and http://apilayer.com for more details.
+
+=== Introduction
+This gem is extracted from the previous version of apilayer gem. The currency_layer gem depends on the apilayer gem to configure and create connections to apilayer.net
+
+=== Installation
+
+==== Using Bundler
+
+Add apilayer in your <tt>Gemfile</tt>:
+
+  gem "currency_layer"
+
+Run the following in your console:
+
+  $ bundle install
+  
+=== Usage
+
+==== Set up currency_layer
+Once you have signed up for *currencylayer.com*, you will receive an access_key. 
+Then configure your Apilayer::Currency module like this:
+
+  Apilayer::Currency.configure do |configs|
+    configs.access_key = "my_access_key_123"
+    configs.https = true
+  end
+
+Please note that the https configuration is optional and only available to paid-accounts.
+If unset, these configuration-values are just nil.
+
+You can always review you configurations with:
+
+  Apilayer::Currency.configs
+
+Once your configurations are set, you are ready to go
+
+==== currencylayer
+After setting the access_key for *currencylayer*, you can use Apilayer::Currency to call *currencylayer*'s API
+  Apilayer::Currency.list
+
+  Apilayer::Currency.live
+  Apilayer::Currency.live(:currencies => %w[GBP, CHF])
+  Apilayer::Currency.live(:source => "EUR") # source-currency is USD by default
+  Apilayer::Currency.live(:source => "EUR", :currencies => %w[GBP, CHF])
+
+  Apilayer::Currency.historical("2016-01-01")
+  Apilayer::Currency.historical("2016-01-01", :currencies => %w[GBP CHF])
+  Apilayer::Currency.historical(:source => "EUR") # source-currency is USD by default
+  Apilayer::Currency.historical("2016-01-01", :currencies => %w[GBP CHF], :source => "EUR")
+
+  Apilayer::Currency.convert("EUR", "CHF", 100) # convert 100 EUR to CHF
+  Apilayer::Currency.convert("EUR", "CHF", 100, "2015-06-01") # based on specific date
+
+  Apilayer::Currency.timeframe("2016-01-01", "2016-06-01")
+  Apilayer::Currency.timeframe("2016-01-01", "2016-06-01", :currencies => %w[GBP CHF])
+  Apilayer::Currency.timeframe("2016-01-01", "2016-06-01", :source => "EUR")
+  Apilayer::Currency.timeframe("2016-01-01", "2016-06-01", :currencies => %w[GBP CHF], :source => "EUR")
+
+  Apilayer::Currency.change
+  Apilayer::Currency.change("2016-01-01", "2016-03-01")
+  Apilayer::Currency.change("2016-01-01", "2016-03-01", :source => "EUR")
+  Apilayer::Currency.change("2016-01-01", "2016-03-01", :currencies => %w[GBP CHF])
+  Apilayer::Currency.change("2016-01-01", "2016-03-01", :source => "EUR", :currencies => %w[GBP CHF])
+  Apilayer::Currency.change(nil, nil, {:source => "EUR"})
+  Apilayer::Currency.change(nil, nil, {:currencies => %w[GBP CHF]})
+  Apilayer::Currency.change(nil, nil, {:source => "EUR", :currencies => %w[GBP CHF]})
+  
+==== Re-Configure Apilayer
+If you happened to have forgotten to set or entered an incorrect value, you can re-configure your Apilayer module by:
+
+  # Example: reconfigure https
+  Apilayer::Currency.configure do |configs|
+    configs.https = true
+  end
