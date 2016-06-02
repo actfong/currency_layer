@@ -3,7 +3,7 @@ Gem::Specification.new do |spec|
   spec.version        = '0.1.0'
   spec.authors        = ["Alex Fong"]
   spec.email          = ["actfong@gmail.com"]
-  spec.files          = Dir["lib/currency_layer.rb", 
+  spec.files          = Dir["lib/currencylayer.rb", 
                           "lib/apilayer/*",
                           "Gemfile",
                           "LICENSE",
