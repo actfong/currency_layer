@@ -69,7 +69,7 @@ After setting the access_key for *currencylayer*, you can use Apilayer::Currency
   Apilayer::Currency.change(nil, nil, {:currencies => %w[GBP CHF]})
   Apilayer::Currency.change(nil, nil, {:source => "EUR", :currencies => %w[GBP CHF]})
   
-==== Re-Configure Apilayer
+==== Re-Configure access_key and https
 If you happened to have forgotten to set or entered an incorrect value, you can re-configure your Apilayer module by:
 
   # Example: reconfigure https
