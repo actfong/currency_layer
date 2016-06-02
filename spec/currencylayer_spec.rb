@@ -2,8 +2,8 @@ require "spec_helper"
 
 describe Apilayer::Currency do
   before(:each) do
-    Apilayer.configure do |configs|
-      configs.currency_key = "currency_layer_key123"
+    Apilayer::Currency.configure do |configs|
+      configs.access_key = "currency_layer_key123"
     end    
   end
 
