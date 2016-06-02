@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name           = 'currency_layer'
-  spec.version        = '0.1.0'
+  spec.version        = '0.1.1'
   spec.authors        = ["Alex Fong"]
   spec.email          = ["actfong@gmail.com"]
   spec.files          = Dir["lib/currencylayer.rb", 
