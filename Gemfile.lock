@@ -10,7 +10,7 @@ GIT
 PATH
   remote: .
   specs:
-    currencylayer (0.1.0)
+    currency_layer (0.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -64,7 +64,7 @@ PLATFORMS
 DEPENDENCIES
   apilayer!
   bundler (~> 1.7, >= 1.7.9)
-  currencylayer!
+  currency_layer!
   pry (~> 0.10, >= 0.10.1)
   rake (~> 10.1, >= 0.10.1)
   rspec (~> 3.0, >= 3.0.0)

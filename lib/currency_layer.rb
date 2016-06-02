@@ -1,4 +1,4 @@
 require 'rubygems'
 require 'apilayer'
 
-require "apilayer/currencylayer"
+require "apilayer/currency_layer"

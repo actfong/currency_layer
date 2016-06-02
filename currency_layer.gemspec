@@ -1,9 +1,9 @@
 Gem::Specification.new do |spec|
-  spec.name           = 'currencylayer'
+  spec.name           = 'currency_layer'
   spec.version        = '0.1.0'
   spec.authors        = ["Alex Fong"]
   spec.email          = ["actfong@gmail.com"]
-  spec.files          = Dir["lib/currencylayer.rb", 
+  spec.files          = Dir["lib/currency_layer.rb", 
                           "lib/apilayer/*",
                           "Gemfile",
                           "LICENSE",
@@ -11,8 +11,8 @@ Gem::Specification.new do |spec|
                           "README.rdoc"
                         ]
 
-  spec.summary        = %q{Ruby wrapper for currencylayer by apilayer. See https://currencylayer.com/ and https://apilayer.com/ for more details.}
-  spec.description    = %q{Ruby wrapper for currencylayer by apilayer. See https://currencylayer.com/ and https://apilayer.com/ for more details.}
+  spec.summary        = %q{Ruby wrapper for currencylayer by apilayer. See https://currencylayer.com/ for more details.}
+  spec.description    = %q{Ruby wrapper for currencylayer by apilayer. This gem depends on the apilayer gem, which provides a common connection-interface to various services of apilayer.net (such as currencylayer and vatlayer). See https://currencylayer.com/ and https://apilayer.com/ for more details.}
   spec.homepage       = "https://github.com/actfong/currencylayer"
   spec.licenses       = %w(MIT)
 
