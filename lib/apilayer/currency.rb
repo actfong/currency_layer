@@ -13,8 +13,8 @@ module Apilayer
     CHANGE_SLUG = "change"
     LIST_SLUG = "list"
 
-    ## Validations 
-    # 
+    ## Validations
+    #
     def self.validate_options(options)
       options.keys.each do |key|
         unless [:currencies, :source].include? key
